@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #d6bfa4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fff9ed;
+  width: 90%;
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #5c2e00;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #5c2e00;
+  margin-top: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #d6bfa4;
+  margin: 20px 0;
+}
+
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.botao-voltar {
+  display: inline-block;
+  margin: 20px 15px;
+  padding: 10px 20px;
+  background-color: #f4ecc949;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.botao-voltar:hover {
+  background-color: #f4ecc900;
+}

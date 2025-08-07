@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container show">
+      <div class="bem-vindo">Bem-vindo! Crie sua conta</div>
+      <form action="#" method="post">
+        <label for="nome">Nome completo</label>
+        <input id="nome" type="text" placeholder="Nome completo" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Ex: @gmail.com, @outlook, @yahoo, etc" />
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" type="tel" placeholder="(99) 00000-0000" pattern="\(\d{2}\)\s\d{5}-\d{4}" required />
+
+        <label for="data-nascimento">Data de nascimento</label>
+        <input id="data-nascimento" type="date" required />
+
+        <label for="genero">Gênero</label>
+        <select id="genero" name="genero" required>
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+          <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+        </select>
+
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="Senha" required />
+
+        <label for="confirmar-senha">Confirmar senha</label>
+        <input id="confirmar-senha" type="password" placeholder="Confirmar senha" required />
+
+        <button class="btn-login" type="submit">Cadastrar</button>
+      </form>
+      <a class="novo-cadastro" href="entrada.html">Já tem uma conta? Faça login</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <p>Email: victor@gmail.com</p>
+        <p>Telefone: (17) 98100-8508</p>
+      </div>
+      <div class="footer-section">
+        <h3>Institucional</h3>
+        <a href="#">Política de Privacidade</a><br>
+        <a href="#">Termos de Uso</a><br>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="https://github.com/vitinzrlk7"><img src="Github-PNG-Image.webp" alt="Perfil no GitHub de Victor" /></a>
+          <a href="https://www.instagram.com/v1ctor7k/"><img src="insta.webp" alt="Perfil no Instagram de Victor" /></a>
+          <a href="#"><img src="face.webp" alt="Perfil no Facebook de Victor" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ReceitaSite. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const senha = document.getElementById('senha').value;
+      const confirmarSenha = document.getElementById('confirmar-senha').value;
+
+      if (senha !== confirmarSenha) {
+        alert('As senhas não coincidem!');
+        return;
+      }
+
+      window.location.href = 'entrada.html';
+    });
+  </script>
+</body>
+</html>
