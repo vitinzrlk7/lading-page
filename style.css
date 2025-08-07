@@ -1,0 +1,101 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: transparent;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.65);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 500px;
+  height: 320px;
+  background: rgba(170, 170, 170, 0.15);
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #d2d2d2;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo img {
+  width: 160px;
+  margin-bottom: 20px;
+  transition: transform 0.6s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.bem-vindo {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  color: #fffde7;
+}
+
+.btn-login {
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(45deg, #f9b700, #f58c00);
+  color: #3a2500;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px 0;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(227, 227, 227, 0.6);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn-login:hover {
+  background: linear-gradient(45deg, #d99927, #ffb744);
+  box-shadow: 0 8px 25px rgba(217, 153, 39, 0.8);
+}
+
+.novo-cadastro {
+  color: #ffd54f;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+  display: inline-block;
+}
+
+.novo-cadastro:hover {
+  color: #fff176;
+}
